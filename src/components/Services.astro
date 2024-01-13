@@ -1,0 +1,163 @@
+<section class="flex-container services">
+
+    <section class="flex-item text">
+        <h2>Pricing List</h2>
+        <hr>
+        <div class="services-wrapper">
+        <div>
+            <div class="table-wrapper hair">
+                <h5>Hair</h5>
+                <table>
+                    <tr>
+                        <td>Haircut</td>
+                        <td>10 $</td>
+                    </tr>
+
+                    <tr>
+                        <td>Shampoo Only</td>
+                        <td>6 $</td>
+                    </tr>
+
+                    <tr>
+                        <td>Shampoo/Style</td>
+                        <td>15 $</td>
+                    </tr>
+
+                    <tr>
+                        <td>Thermal Style (No Shampoo)</td>
+                        <td>10 $</td>
+                    </tr>
+
+                    <tr>
+                        <td>Shampoo/Cut/Style</td>
+                        <td>17 $</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div>
+            <div class="table-wrapper">
+                <h5>Color</h5>
+                <table>
+                    <tr>
+                        <td>Full Head Foil Highlights/Low Lights</td>
+                        <td>50 $</td>
+                    </tr>
+
+                    <tr>
+                        <td>Halo Highlights/Low Lights</td>
+                        <td>40 $</td>
+                    </tr>
+
+                    <tr>
+                        <td>Bang Trim</td>
+                        <td>3 $</td>
+                    </tr>
+
+                    <tr>
+                        <td>Conditioning Treatment</td>
+                        <td>8 $</td>
+                    </tr>
+
+                    <tr>
+                        <td>All Over Color</td>
+                        <td>40 $</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div>
+
+            <table>
+                <tr>
+                    <td>Basic Manicure</td>
+                    <td>16 $</td>
+                </tr>
+            </table>
+
+        </div>
+        </div>
+    </section>	
+</section>
+
+<style>
+    .hair {
+        align-self: flex-start;
+    }
+
+    .services {
+        padding-block: 60px;
+    }
+
+    .table-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    hr {
+        color: var(--sandy);
+        width: 60%;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .flex-item {
+        background-color: var(--seaweed);
+    }
+    .flex-item > div{
+		padding-block: max(6vh, 1rem);
+		padding-inline: 10px;
+	}
+
+    h5 {
+        font-family:'Themysion';
+        color: var(--baby-blue);
+        font-size: 4rem;
+        padding-left: 50px;
+    }
+    table {
+        margin-inline: auto;
+        font-family: 'Saira Condensed';
+        color: var(--sandy);
+        font-size: 1.4rem;
+        border-spacing: 80px 10px;
+    }
+
+    table td {
+    border-left: 2px solid var(--sandy);
+    padding-left: 50px; /* Adjust this value as needed */
+    padding-right: 50px;
+}
+
+    table { border: none; border-collapse: collapse; }
+table td { border-left: 2px solid var(--sandy); }
+table td:first-child { border-left: none; }
+
+    @media (min-width: 768px) {
+		.flex-item > div{
+			padding-block: max(8vh, 1rem);
+			padding-inline: 40px;
+		}
+	}
+	@media (min-width: 900px) {
+		.flex-container {
+		display: flex;
+		align-items: center;
+		}
+		.flex-item {
+			flex: 1;
+		}
+		.flex-item > div {
+			padding-inline: 20px;
+			padding-block: max(1vh, 1rem);
+		}
+		.services-wrapper {
+			display: flex;
+			justify-content: space-around;
+            align-items: center;
+	}
+    }

@@ -1,0 +1,173 @@
+---
+import HeaderLink from './HeaderLink.astro';
+---
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Saira+Condensed&display=swap" rel="stylesheet">
+
+<header>
+    <a href="/">
+        <img class="nav-logo" src="logo.jpg" alt="logo">
+    </a>
+
+    <nav class="navbar"> 
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a class="navLink" href="/">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a class="navLink" href="/about/">ABOUT</a>
+            </li>
+            <li class="nav-item">
+                <a class="navLink" href="/blog/">SERVICES</a>
+            </li>
+            <li class="nav-item">
+                <a class="navLink" href="/blog/">CONTACT</a>
+            </li>
+        </ul>
+
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <ul class="social-links">
+        <li>
+            <a href="https://www.facebook.com/profile.php?id=61551100108854">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 1200 1200"><path fill="currentColor" d="M0 0v1200h1200V0H0zm863.232 156.592c8.715-.185 17.791.098 27.173.732c34.476.047 70.483 3.155 106.201 6.299l-3.882 142.09h-95.947c-44.988-.996-61.235 16.473-62.695 67.236V484.57h162.524l-6.445 152.197H834.082v423.706H675.513V636.768H565.43V484.57h110.083V353.906c0-94.209 39.829-154.174 118.286-184.57c20.149-7.928 43.288-12.189 69.433-12.744z"/></svg>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="currentColor" d="M1 3h22v18H1V3Zm2 2v1.83l9 4.55l9-4.55V5H3Zm18 4.07l-9 4.55l-9-4.55V19h18V9.07Z"/></svg>
+                </a>
+        </li>
+    </ul>
+</header>
+
+<style>
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 30px;
+        background-color: var(--pine);
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .nav-logo {
+        width: 100px;
+        display: flex;
+    }
+
+    a {
+        font-family: 'Saira Condensed', sans-serif;
+        font-weight: 200;
+        font-size: 1.4rem;
+    }
+
+    .social-links {
+        gap: 15px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: var(--sandy);
+    }
+
+
+    @media (max-width: 768px) {
+        .social-links {
+            display: none;
+        }
+
+        .nav-menu {
+            position: fixed;
+            left: -120%;
+            top: 5.5rem;
+            flex-direction: column;
+            gap: 0;
+            background-color: var(--pine);
+            width: 100%;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .nav-menu.active {
+            left: 0;
+        }
+
+        .nav-item {
+            margin: 0 0;
+        }
+
+        .hamburger {
+            display: block;
+            cursor: pointer;
+        }
+
+        .hamburger.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active .bar:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+        .hamburger.active .bar:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+    }        
+</style>
+
+<script>
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+    const body = document.querySelector(".body");
+
+    hamburger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+        body.classList.toggle("active");
+    }
+    
+    const navLink = document.querySelectorAll(".nav-link");
+
+    navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+    navMenu.addEventListener("click", closeMenu);
+
+    // Event listener for clicks on the document body
+    document.addEventListener("click", (event) => {
+    const isClickInsideMenu = navMenu.contains(event.target);
+    const isClickOnHamburger = hamburger.contains(event.target);
+
+    if (!isClickInsideMenu && !isClickOnHamburger) {
+        closeMenu();
+    }
+    });
+
+    function closeMenu() {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+    }
+    </script>

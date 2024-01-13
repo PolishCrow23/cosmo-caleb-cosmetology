@@ -1,0 +1,102 @@
+<section class="flex-container">
+
+    <div class="flex-item text">
+		<!-- extra div for 1:1 ratio -->
+        <div> 
+            <h1 class="hero-heading">Cosmo Caleb</br>Cosmetology</h1>
+            <span class="hero-span">by Caleb Fant</span>
+            <p>Hello! I am Caleb. I am in school for Cosmetology and I love doing hair. I have a super cool gf who's super awesome and so cool and so amazing.</p>
+            <a href="https://www.facebook.com/profile.php?id=61551100108854" class="visit-button">BOOK VISIT</a>
+        </div>
+    </div>	
+
+     <div class="flex-item">
+        <img src="hero-blue.jpg" alt="smiling woman closeup">
+    </div>	
+
+    </section>
+
+<style>
+    section {
+		text-align: center;
+		/* margin-inline: auto; */
+		background-color: var(--seaweed);
+	}
+
+    img {
+		display: block;
+	}
+
+    h1 {
+		margin: 0;
+		letter-spacing: 0.09em;
+		line-height: 0.9;
+		font-size: calc(5vw + 2rem);
+	}
+
+
+	
+    span {
+	    font-family: Themysion;
+	    font-size: calc(3.5vw + 2rem);
+	}
+
+    .flex-item > div{
+		padding-top: max(10vw, 1rem);
+		padding-bottom: max(9vw, 1rem);
+		padding-inline: 4%;
+	}
+
+	.visit-button {
+			margin-top: 50px;
+		}
+
+    @media (min-width: 768px) {
+		.flex-item > div{
+			padding-inline: 6%;
+		}
+
+	}
+
+	@media (min-width: 900px) {
+		.flex-container {
+		display: flex;
+		align-items: center;
+		}
+
+		.flex-item {
+			flex: 1;
+		}
+
+		.flex-item > div {
+			padding-block: max(1vw, 1rem);
+		}
+
+		h1 {
+			font-size: calc(1vw + 3rem);
+		}
+
+		span {
+			font-size: calc(1.2vw + 2rem);
+		}
+
+		p {
+			font-size: calc(1vw + 0.5rem);
+		}
+
+	}
+
+	@media (min-width: 1200px) {
+		.flex-item > div {
+			padding-inline: 60px;
+		}
+
+		h1 {
+			font-size: calc(4vw + 1rem);
+		}
+
+		span {
+			font-size: calc(3vw + 0.6rem);
+		}
+	}
+</style>

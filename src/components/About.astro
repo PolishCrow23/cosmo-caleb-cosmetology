@@ -1,0 +1,95 @@
+<section>
+    <div class="about-description">
+        <span>Hello</span>
+        <h2>About me</h2>
+        <hr>
+        <p>Hello! I am Caleb. I am in school for Cosmetology and I love doing hair. I attend Beauty Institute in Maysville, Kentucky.</p>
+    </div>
+    <div>
+        <img src="Caleb.png">
+    </div>
+    <div class="flex-container opening-hours">
+        <div>
+            <h3>Opening hours:</h3>
+            <h4>Monday – Friday</h4>
+            <span>10:30 AM - 3:00 PM</span>
+        </div>
+        <div>
+            <h3 class="location">Location:</h3>
+            <span>111 W 2nd Street</span></br><span>Maysville, Kentucky</span>
+        </div>
+    </div>
+</section>
+
+<style>
+    section {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        background-color: #073b55;
+        padding: 50px;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    h2 {
+        letter-spacing: 2px;
+    }
+
+    .text {
+		align-items: center;
+	}
+
+    .bold {
+        font-weight: 600;
+    }
+
+    section > div {
+        flex: 1;
+    }
+
+    section span {
+        font-size: 1.4rem;
+    }
+
+    .opening-hours {
+        border: 2px solid #b9f2fd;
+        padding: 3% 0;
+        text-align: center;
+        justify-content: space-around;
+        gap: 10px;
+        border-radius: 140px;
+    }
+
+    .about-description h3 {
+        margin-top: 0;
+    }
+
+    img {
+        width: 400px;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+        margin-bottom: 3%;
+    }
+
+    @media (min-width: 900px) {
+        section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 30px;
+        }
+
+        .opening-hours {
+            flex-direction: column;
+        }
+
+        img {
+            margin-block: 0;
+        }
+    }
+</style>

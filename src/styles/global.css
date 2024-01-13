@@ -1,0 +1,120 @@
+@font-face {
+	font-family: 'Themysion';
+	src: url('/fonts/Themysion-2OjKo.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+:root {
+	--seaweed: #0c7d70;
+	--pine: #07554b;
+	--marine: #073b55;
+	--baby-blue: #c3f5ff;
+	--sandy: #fde5b9;
+}
+
+html {
+    font-size: 62.%;
+}
+
+body {
+	background-color: var(--seaweed);
+	margin: 0;
+	padding: 0; 
+	line-height: 2;
+	color: white;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Forum', serif;
+	font-weight: 100;
+	line-height: 1.2;
+	color: #fde5b9;
+	margin-block: 0 0.5em;
+}
+h1 {
+	font-size: 3.5rem;
+}
+h2 {
+	font-size: 3.5rem;
+	margin: 0;
+}
+h3 {
+	font-size: 2rem;
+}
+h4 {
+	font-size: 1.5rem;
+}
+h5 {
+	font-size: 1.25rem;
+}
+ul {
+	margin: 0;
+	list-style: none;
+}
+a {
+	text-decoration: none;
+
+	transition-duration: 1.5s;
+}
+a:hover {
+	color: #856115;
+	transition-duration: 0.6s;
+}
+p {
+	font-size: 1.2rem;
+	text-align: justify;
+	line-height: 1.6;
+	color: #fffaef;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+table {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+span {
+	color: #c3f5ff;
+	font-family: 'Saira Condensed', sans-serif;
+}
+
+hr {
+	width: 100%;
+    border-top: 1.5px solid var(--sandy);
+	margin-bottom: 2em;
+	}
+
+	img {
+		width: 100%;
+	}
+
+	.visit-button {
+		display: block;
+		margin: 10px auto 5px;
+		width: 40%;
+		border: solid 2px #b9f2fd;
+		padding-block: 5px;
+		font-size: 1.2rem;
+
+		color: #fde5b9;
+		font-family: 'Saira Condensed';
+	}
+	
+	.visit-button:hover {
+		background-color: #c3f5ff;
+		color: #0c7d70;
+	}
+
+	a {
+		color: var(--sandy);
+		transition-duration: 0.6s;
+	}
+
+	a:hover {
+	    color: var(--baby-blue);
+	    transition-duration: 0.2s;
+    }
+
